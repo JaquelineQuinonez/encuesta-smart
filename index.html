@@ -1,0 +1,149 @@
+# encuesta-smart
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción del Cliente - Smart Supermarkets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        select,
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .bonus-message {
+            font-size: 14px;
+            color: #888;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/procesar_encuesta" method="post">
+        <img src="/logo smart.png" alt="Logo de Smart Supermarkets">
+        <h1>Encuesta de Satisfacción del Cliente</h1>
+
+        <label for="experiencia_general">1. ¿Cómo calificaría su experiencia general en nuestra tienda?</label>
+        <select name="experiencia_general" id="experiencia_general">
+            <option value="excelente">Excelente</option>
+            <option value="bueno">Bueno</option>
+            <option value="regular">Regular</option>
+            <option value="malo">Malo</option>
+        </select>
+
+        <label for="atencion_cliente">2. ¿Cómo evalúa la atención recibida por nuestro personal?</label>
+        <select name="atencion_cliente" id="atencion_cliente">
+            <option value="excelente">Excelente</option>
+            <option value="bueno">Bueno</option>
+            <option value="regular">Regular</option>
+            <option value="malo">Malo</option>
+        </select>
+
+        <label for="calidad_productos">3. ¿Cómo calificaría la calidad de nuestros productos?</label>
+        <select name="calidad_productos" id="calidad_productos">
+            <option value="excelente">Excelente</option>
+            <option value="bueno">Bueno</option>
+            <option value="regular">Regular</option>
+            <option value="malo">Malo</option>
+        </select>
+
+        <label for="variedad_productos">4. ¿Está satisfecho con la variedad de productos disponibles?</label>
+        <select name="variedad_productos" id="variedad_productos">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="limpieza_organizacion">5. ¿Cómo percibe la limpieza y organización de nuestra tienda?</label>
+        <select name="limpieza_organizacion" id="limpieza_organizacion">
+            <option value="excelente">Excelente</option>
+            <option value="bueno">Bueno</option>
+            <option value="regular">Regular</option>
+            <option value="malo">Malo</option>
+        </select>
+
+        <label for="recomendaria">6. ¿Recomendaría nuestra tienda a amigos o familiares?</label>
+        <select name="recomendaria" id="recomendaria">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="bonificacion">7. ¿Acepta recibir un 5% de bonificación en su próxima compra al completar la encuesta?</label>
+        <select name="bonificacion" id="bonificacion">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="comentarios_adicionales">Comentarios adicionales:</label>
+        <textarea name="comentarios_adicionales" id="comentarios_adicionales" rows="4"></textarea>
+
+        <label for="nombre">Su Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="correo">Su Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo">
+
+        <button type="submit">Enviar Encuesta</button>
+
+        <p class="bonus-message">¡Responda la encuesta y obtenga un 5% de bonificación en su próxima compra!</p>
+    </form>
+
+</body>
+</html>
